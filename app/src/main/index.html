@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jam Masjid Digital V2</title><link rel="stylesheet" href="style.css">
+</head><body>
+<main id="screen"><div id="background"></div><div class="shade"></div>
+<header class="topbar"><div class="mosque-info"><h1 id="mosque">Masjid Baitul Ghofar</h1><p id="locationText">Surabaya</p></div><div id="date">Tanggal</div></header>
+<section class="clock-area"><div id="clock">00:00:00</div></section>
+<section class="next-prayer"><div class="next-label">MENUJU SALAT BERIKUTNYA</div><div id="next">Subuh</div><div id="count">00:00:00</div></section>
+<section class="prayer-row" id="times"></section>
+<section class="content-area"><div class="info-panel" id="announcementPanel"><h2>INFORMASI &amp; PENGUMUMAN</h2><div id="announcement">Selamat datang di masjid kami</div></div><div class="info-panel report-panel" id="reportPanel"><h2>LAPORAN / INFORMASI MASJID</h2><div id="report">Informasi masjid</div></div><div class="video-panel" id="videoPanel" hidden><iframe id="youtube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></section>
+<div class="ticker"><span id="text">Selamat datang di masjid kami</span></div></main>
+<section id="admin" hidden><h1>Pengaturan Jam Masjid Digital V2</h1><p class="admin-intro">Panel pengaturan lokal. Perubahan disimpan di perangkat.</p><form id="form">
+<h2>Identitas Masjid</h2><label>Nama Masjid<input id="mosqueInput"></label><label>Lokasi / Alamat<input id="location"></label>
+<h2>Background Layar</h2><label>URL gambar background (opsional)<input id="backgroundUrl" placeholder="https://..."></label><label>Tambah foto dari HP<input id="backgroundFile" type="file" accept="image/*" multiple></label><p id="imageStatus">Foto dapat ditambahkan dari galeri HP.</p><label>Durasi slideshow (detik)<input id="slideDuration" type="number" min="5" value="15"></label>
+<h2>Jadwal Salat (HH:MM)</h2><div class="grid" id="timeFields"></div><h2>Jeda Iqomah (menit)</h2><div class="grid" id="iqFields"></div><h2>Koreksi waktu salat (menit)</h2><div class="grid" id="offFields"></div>
+<h2>Pengumuman</h2><label>Isi pengumuman<textarea id="announcementInput" rows="5"></textarea></label><h2>Laporan / Informasi</h2><label>Isi laporan<textarea id="reportInput" rows="5"></textarea></label><h2>Tayangan YouTube</h2><label>URL video atau live streaming<input id="youtubeUrl" placeholder="https://www.youtube.com/watch?v=..."></label><h2>Running Text</h2><label>Teks berjalan<textarea id="message" rows="3"></textarea></label><button type="submit">SIMPAN PENGATURAN</button><p id="saved"></p></form><p class="admin-note">Panel lokal: http://localhost:8080/admin<br>Pengaturan tersimpan di perangkat/browser ini.</p></section>
+<script src="app.js"></script></body></html>
